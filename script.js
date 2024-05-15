@@ -13,8 +13,20 @@ function handleOnAdd() {
     
 }
 
-function handleOnChecked() {
-    
+function handleOnChecked(element) {
+
+    let labelElement = document.querySelector(`label[for="${element.id}"]`)
+
+    if (element.checked) {
+        labelElement.classList.add('coret')
+    } else {
+        labelElement.classList.remove('coret')
+    }
+}
+
+function handleOnChangeSelect(element) {
+    let dipilihElement = document.getElementById("dipilih")
+    dipilihElement.innerHTML = `<div>${element.value}</div>`
 }
 
 function handleOnDelete() {
@@ -31,6 +43,7 @@ function renderTodoItem(id, value) {
                     type="checkbox" 
                     name="todo${id}" 
                     value="${value}"
+                    onchange=handleOnChecked(this)
                 />
             </div>
             <div class="width-lg multiline">

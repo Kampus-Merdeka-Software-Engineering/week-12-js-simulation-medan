@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="card">
+            <h2 class="title">TODOLIST</h2>
+            <div class="input-todo-container">
+                <input id="input-todo" type="text">
+                <button class="btn-add" onclick="handleOnAdd()">+</button>
+            </div>
+            
+            <label for="cars">Choose a car:</label>
+
+            <select name="cars" id="cars" onchange="handleOnChangeSelect(this)">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+
+            <div id="dipilih">
+
+            </div>
+
+            <div id="todolist-container">            
+            </div>
+        </div>
+    </main>
+    <script src="script.js">
+    </script>
+</body>
+</html>

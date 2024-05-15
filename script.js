@@ -1,5 +1,15 @@
 
+let counter = 0;
+
 function handleOnAdd() {
+    let inputElement = document.getElementById("input-todo")
+    let inputValue = inputElement.value
+
+    let todosContainer = document.getElementById("todolist-container")
+    
+    todosContainer.innerHTML += renderTodoItem(counter, inputValue)
+    counter++
+    inputElement.value = ''
     
 }
 
